@@ -37,4 +37,4 @@ jobs:
               run: yarn start ${{ secrets.USERNAME }} ${{ secrets.PASSWORD }} 0 ${{ secrets.SECRETKEY }}
 
             - name: Get Epic Freebies - shibanet0
-              run: yarn start ${{ secrets.USERNAME1 }} ${{ secrets.PASSWORD1 }} 0 ${{ secrets.SECRETKEY }}
+              run: yarn start ${{ secrets.USERNAME1 }} ${{ secrets.PASSWORD1 }} 0 ${{ secrets.SECRETKEY1 }}
