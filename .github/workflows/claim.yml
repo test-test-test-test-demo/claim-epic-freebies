@@ -1,4 +1,4 @@
-name: Claim Free Games
+name: Claim Free Games - shibanet1
 
 
 on: # When to run this workflow
@@ -10,7 +10,7 @@ on: # When to run this workflow
 #        types: [started] # When repo owner stars this repo
 
     schedule:
-        - cron: "0 0 * * *" # Everyday at 00:00 UTC
+        - cron: "0 22 * * *" # Everyday at 00:00 UTC
 
 jobs:
     claim:
@@ -36,6 +36,3 @@ jobs:
 
             - name: Get Epic Freebies - shibanet1
               run: yarn start ${{ secrets.USERNAME }} ${{ secrets.PASSWORD }} 0 ${{ secrets.SECRETKEY }}
-
-            - name: Get Epic Freebies - shibanet0
-              run: yarn start ${{ secrets.USERNAME1 }} ${{ secrets.PASSWORD1 }} 0 ${{ secrets.SECRETKEY1 }}
