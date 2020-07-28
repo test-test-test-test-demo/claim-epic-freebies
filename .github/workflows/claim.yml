@@ -33,5 +33,8 @@ jobs:
             - name: Fix Epicgames Client Bug
               run: mkdir -p .egstore
 
-            - name: Get Epic Freebies
+            - name: Get Epic Freebies - shibanet1
               run: yarn start ${{ secrets.USERNAME }} ${{ secrets.PASSWORD }} 0 ${{ secrets.SECRETKEY }}
+
+            - name: Get Epic Freebies - shibanet0
+              run: yarn start ${{ secrets.USERNAME1 }} ${{ secrets.PASSWORD1 }} 0 ${{ secrets.SECRETKEY }}
