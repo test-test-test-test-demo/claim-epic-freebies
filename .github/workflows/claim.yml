@@ -10,7 +10,7 @@ on: # When to run this workflow
 #        types: [started] # When repo owner stars this repo
 
     schedule:
-        - cron: "0 * * * *" # Everyday at 00:00 UTC
+        - cron: "0 0 * * *" # Everyday at 00:00 UTC
 
 jobs:
     claim:
@@ -29,6 +29,9 @@ jobs:
 
             - name: Install dependencies
               run: yarn
+              
+            - name: Fix Epicgames Client Bug
+              run: mkdir -p .egstore
 
             - name: Get Epic Freebies
               run: yarn start ${{ secrets.USERNAME }} ${{ secrets.PASSWORD }} 0 ${{ secrets.SECRETKEY }}
